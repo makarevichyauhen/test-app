@@ -1,8 +1,6 @@
 ## Overview
 
-This project is created with **Expo**, enabling fast development, testing, and publishing of React Native apps without native SDK setup. It’s ideal for rapid prototyping and app development.
-
----
+The application was developed using Expo and features two screens along with several components. State management is handled with MobX, complemented by auxiliary libraries for data persistence. Special attention was given to minimizing re-renders throughout the app, primarily achieved through the use of MobX computed properties. The application's architecture allows for avoiding the use of useCallback hooks for handlers passed to child components, thereby maintaining optimal performance and simplicity.
 
 ## Requirements
 
