@@ -27,7 +27,7 @@ export const SelectedCurrency = observer(function SelectedCurrencyTo({
         onPress={() => {
           store.setCurrencyFromAmount('');
           navigate({
-            pathname: '/CurrenciesList',
+            pathname: '/currenciesList',
             params: { type },
           });
         }}

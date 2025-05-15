@@ -24,7 +24,7 @@ export default function RootLayout() {
           options={{ title: '', headerShown: false }}
         />
         <Stack.Screen
-          name="CurrenciesList"
+          name="currenciesList"
           options={{ title: 'Currency Select' }}
         />
       </Stack>
