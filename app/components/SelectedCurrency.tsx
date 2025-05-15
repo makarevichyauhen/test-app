@@ -23,10 +23,11 @@ export const SelectedCurrency = observer(function SelectedCurrencyTo({
       <Text style={styles.title}>{type === 'from' ? 'From' : 'To'}</Text>
       <TouchableOpacity
         style={styles.container}
+        hitSlop={10}
         onPress={() => {
           store.setCurrencyFromAmount('');
           navigate({
-            pathname: '/currenciesList',
+            pathname: '/CurrenciesList',
             params: { type },
           });
         }}

@@ -1,4 +1,6 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { makeObservable } from 'mobx';
+import { makePersistable } from 'mobx-persist-store';
 import { currencies } from '../currencies';
 import { CurrencyData, Rates } from '../types';
 import { convertCurrency } from '../utils';
@@ -43,6 +45,19 @@ export class CurrenciesExchangeStore {
       rates: true,
       ratesIsNotLoaded: true,
     });
+    makePersistable(
+      this,
+      {
+        name: 'CurrenciesExchangeStore',
+        properties: ['rates'],
+        storage: AsyncStorage,
+        expireIn: 86400000,
+        removeOnExpiration: true,
+        stringify: true,
+        debugMode: true,
+      },
+      { fireImmediately: false }
+    );
   }
 
   get currenciesBySearchAndRates() {

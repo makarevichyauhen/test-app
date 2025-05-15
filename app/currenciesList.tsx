@@ -15,11 +15,11 @@ const CurrenciesList = observer(function CurrenciesList() {
   };
 
   return (
-    <View style={{ flex: 1, paddingVertical: 20 }}>
+    <View style={styles.container}>
       <SearchInput />
       <FlatList
-        style={{ paddingHorizontal: 20 }}
-        contentContainerStyle={{ borderRadius: 8, overflow: 'hidden' }}
+        style={styles.flatlistStyle}
+        contentContainerStyle={styles.flatlistContentContainerStyle}
         data={store.currenciesBySearchAndRates}
         renderItem={renderItem}
         keyExtractor={(item) => item.code}
@@ -30,9 +30,15 @@ const CurrenciesList = observer(function CurrenciesList() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
-    paddingTop: 100,
     flex: 1,
+    paddingVertical: 20,
+  },
+  flatlistStyle: {
+    paddingHorizontal: 20,
+  },
+  flatlistContentContainerStyle: {
+    borderRadius: 8,
+    overflow: 'hidden',
   },
 });
 

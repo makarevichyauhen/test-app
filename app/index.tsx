@@ -34,7 +34,6 @@ const Main = observer(function Main() {
         <SelectedCurrency type="from" />
         <TouchableOpacity
           onPress={() => store.swapCurrencies()}
-          hitSlop={15}
           style={styles.swapButton}
         >
           <Image

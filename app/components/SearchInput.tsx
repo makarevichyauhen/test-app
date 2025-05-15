@@ -12,7 +12,6 @@ export const SearchInput = observer(function AmountInput() {
         style={styles.input}
         onChangeText={(val) => store.setCurrencySearch(val)}
         value={store.currencySearch}
-        keyboardType="numeric"
       />
       <AntDesign name="search1" size={24} color="black" style={styles.icon} />
     </View>
